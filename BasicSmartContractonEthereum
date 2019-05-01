@@ -1,0 +1,31 @@
+contract FatihBidirici {
+  //define seller , middleware and buyer for example
+  address buyer;
+  address seller;
+  address mw;
+
+  //seller create a contract for their selling perspective 
+  function FatihBildirici(address_mw, address _seller) {
+    buyer  = msg.sender;
+    mw  = _mw;
+    seller = _seller;
+  }
+
+  //truly completing the selling process
+  function complete() {
+    if (msg.sender == mw) {
+      selfdestruct(seller); // all the money or document sending to seller
+    } else {
+      throw;
+    }  
+  }
+  
+  //cancelling things
+  function cancel() {
+    if (msg.sender == mw) {
+      selfdestruct(buyer); // return back to money or document
+    } else {
+      throw;
+    }  
+  }
+}
