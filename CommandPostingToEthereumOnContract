@@ -1,0 +1,11 @@
+var helloInstance = <SOZLESME>.new({from:<ILGILI_HESAP>,data:<BIN_ICERIK>,gas:896000}, function(e, contract){
+    if(!e) {
+      if(!contract.address) {
+        console.log("Contract transaction send! TransactionHash " + contract.transactionHash + " is waiting to be mined");
+      } else {
+        console.log("Contract mined! Address is : " + contract.address);
+      }
+    } else {
+        console.log("Error in contract creation : "+e);
+    }
+})
