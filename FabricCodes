@@ -1,0 +1,12 @@
+participant Grower extends Business {
+}
+participant Carrier extends Business {
+}
+asset Contract identified by contractId {
+  o String contractId
+  -> Breeders
+  -> Carrier Carrier
+  -> Supplier supplier
+  o DateTime VariesDate
+  o Double unit price
+}
