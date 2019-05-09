@@ -1,0 +1,15 @@
+Clone the container service repository. It can be done by running the given command in your working directory.
+
+– $ git clone https://github.com/SaifRehman/fabric-evm-ibm-container-service.git
+
+Navigate to the container service directory which contains the scripts required to deploy the EVM code.
+
+–  $ cd fabric-evm–ibm-container-service
+
+Navigate to script folder.
+
+–  $ cd cs-offerings/scripts
+
+Deploy to Fabric with an EVM plugin to the IBM Container Service.
+
+–  $ ./create_all.sh
